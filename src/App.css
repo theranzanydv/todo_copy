@@ -1,0 +1,209 @@
+.Todo {
+	max-width: 500px;
+	width: 100%;
+	min-height: 400px;
+	box-shadow: 0 2px 6px #555;
+	margin: 7rem auto;
+	padding: 50px;
+	border-radius: 5px;
+	user-select: none;
+}
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 800;
+	color: #666;
+	margin-bottom: 10px;
+}
+form {
+	width: 100%;
+	height: 40px;
+	margin: 20px 0;
+	display: flex;
+}
+form input,
+form button {
+	flex: 3;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #555;
+	margin: 0 5px;
+}
+
+form button {
+	flex: 1;
+	background: #555;
+	color: #fff;
+	letter-spacing: 2px;
+	cursor: pointer;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
+form button:hover {
+	background: #777;
+}
+.ul li {
+	list-style: none;
+	border: 1px solid #ccc;
+	margin: 10px 0;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: capitalize;
+	border-radius: 5px;
+}
+.ul li .active {
+	opacity: 0.5;
+	text-decoration: line-through;
+	animation-name: fadeList;
+	animation-duration: 400ms;
+}
+@keyframes fadeList {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0.5;
+	}
+}
+.ul li input,
+.row input {
+	margin-right: 5px;
+	transform: translateY(1px);
+}
+.ul li button,
+.row button {
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: #fff;
+	background: darkorange;
+	padding: 5px 15px;
+	cursor: pointer;
+}
+
+.ul li button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+	animation-name: fadeList;
+	animation-duration: 400ms;
+}
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.row #delete {
+	background: crimson;
+	padding: 6px 15px;
+}
+
+label {
+	cursor: pointer;
+}
+@media (max-width: 400px) {
+	.Todo {
+		max-width: 95%;
+		padding: 10px;
+	}
+}
+
+#editValue {
+	border: 1px solid #777;
+	outline: none;
+	border-radius: 5px;
+	padding: 4px;
+}
+
+#nothing {
+	display: block;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	color: crimson;
+}
+span {
+	display: block;
+	color: red;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+
+/* ? Navbar Styling  */
+
+.navbar {
+	width: 100%;
+	height: 1rem;
+	margin-top: 10px;
+	padding: 1rem 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-color: rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	z-index: 2;
+}
+
+.liText {
+	font-size: 0.8rem;
+	text-align: left;
+	color: #777;
+	line-height: 1.5;
+}
+
+.navbar-logo {
+	display: flex;
+	flex: 1;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 2em;
+	color: #777;
+}
+.navbar-links {
+	border: none;
+	outline: none;
+	display: flex;
+	flex: 4;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+}
+.navbar-links > li {
+	margin: 0 1rem;
+	cursor: pointer;
+	flex-direction: column;
+}
+
+.navbar-links > li > div {
+	width: 5px;
+	height: 5px;
+	background-color: transparent;
+	border-radius: 50%;
+	margin-bottom: 5px;
+	margin-left: 15px;
+	transition: background-color 0.5s ease-in-out;
+}
+
+.navbar-links > li > a {
+	color: #777;
+	text-decoration: none;
+	flex-direction: column;
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: 500;
+	transition: all 0.3s ease-in-out;
+}
+.navbar-links > li > a:hover {
+	color: #313bac;
+}
+.navbar-links > li:hover > div {
+	background-color: #313bac;
+}
